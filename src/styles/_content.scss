@@ -1,0 +1,55 @@
+@import "variables";
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__top {
+    padding: 20px;
+    background-color: $gray-color-light;
+
+    h2, ul {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .card {
+      padding: 20px;
+      width: 100%;
+      max-width: 353px;
+      background-color: $gray-color-light;
+
+      @media screen and (max-width: 1030px){
+        max-width: 373px;
+      }
+
+      @media screen and (max-width: 780px){
+        max-width: 353px;
+      }
+
+      @media screen and (max-width: 450px){
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    gap: 20px;
+
+    @media screen and (max-width: 450px){
+      flex-direction: column;
+    }
+  }
+
+  &__left, &__right {
+    padding: 20px;
+    background-color: $gray-color-light;
+  }
+}

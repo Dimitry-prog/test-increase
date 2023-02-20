@@ -1,0 +1,56 @@
+@import "variables";
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  @media screen and (max-width: 450px){
+    display: flex;
+    flex-direction: column;
+  }
+
+  a {
+    transition: .5s;
+    &:hover {
+      opacity: .6;
+    }
+  }
+
+  &__left {
+    padding: 20px;
+    display: flex;
+    gap: 40px;
+    background-color: $gray-color-dark;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  &__mid {
+    padding: 20px;
+    background-color: $gray-color-dark;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: circle;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+
+    & > p {
+      padding: 20px;
+      background-color: $gray-color-dark;
+    }
+  }
+}

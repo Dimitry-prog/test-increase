@@ -1,0 +1,31 @@
+@import "variables";
+
+.aside {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: $gray-color-dark;
+
+  @media screen and (max-width: 780px){
+    display: none;
+  }
+
+  h3 {
+    color: white;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  a {
+    transition: .5s;
+
+    &:hover {
+      opacity: .6;
+    }
+  }
+}

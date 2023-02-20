@@ -1,0 +1,64 @@
+@import "variables";
+
+.header {
+  display: grid;
+  grid-template-columns: 15% 30% 1fr;
+  gap: 20px;
+
+  @media screen and (max-width: 769px){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    background-color: $gray-color-dark;
+
+    @media screen and (max-width: 769px){
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  .nav {
+    background-color: $gray-color-dark;
+
+    @media screen and (max-width: 769px){
+      display: none;
+    }
+  }
+
+  &__info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    background-color: $gray-color-dark;
+
+    @media screen and (max-width: 769px){
+      display: none;
+    }
+
+    & > a {
+      transition: .5s;
+
+      &:hover {
+        opacity: .6;
+      }
+    }
+  }
+
+  .burger {
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/burger.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: $gray-color-dark;
+
+    @media screen and (min-width: 769px){
+      display: none;
+    }
+  }
+}
